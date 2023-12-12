@@ -7,24 +7,26 @@ export const CORE_CONCEPTS = [
 	{
 		image: heartImg,
 		title: 'Znam Was',
-		description: 'Pozwólcie mi dołączyć do tego Waszego kolorowego frontendowego świata, gdzie każdy dzień to nowy div, a każdy projekt to przygoda. I nie musicie się zastanawiać jakim jestem człowiekiem, bo już to Wiecie.',
+		description:
+			'Pozwólcie mi dołączyć do tego Waszego kolorowego frontendowego świata, gdzie każdy dzień to nowy div, a każdy projekt to przygoda. I nie musicie się zastanawiać jakim jestem człowiekiem, bo już to Wiecie.',
 	},
 	{
 		image: wszystkoImg,
 		title: 'Znam aplikację',
-		description: 'Wiem, jak działa aplikacja, tak jak znam swoje ulubione bajki z dzieciństwa. Teraz wystarczy tylko przetłumaczyć te bajkowe opowieści na język programowania.',
+		description:
+			'Wiem, jak działa aplikacja, tak jak znam swoje ulubione bajki z dzieciństwa. Teraz wystarczy tylko przetłumaczyć te bajkowe opowieści na język programowania.',
 	},
 	{
 		image: osiolImg,
 		title: 'Jestem uparta',
 		description:
-			'Upór to moja SUPERMOC, ulubione powiedzenie to "im dalej w las, tym więcej tlenu"',
+			'Upór to moja SUPERMOC, jak mówią to "Im dalej w las, tym więcej tlenu"',
 	},
 	{
 		image: drzewoImg,
 		title: 'Jestem cierpliwa',
 		description:
-			'MATKA FILIPA Cierpliwość w dążeniu do celu to nie tylko cecha charakteru, to filozofia życia. Bo kiedy docieramy na szczyt góry naszych marzeń, spojrzymy w dół i zrozumiemy, że każdy trud był wart tej wspinaczki.',
+			'Cierpliwość w dążeniu do celu to nie tylko cecha charakteru, to filozofia życia. Bo kiedy docieramy na szczyt góry naszych marzeń, spojrzymy w dół i zrozumiemy, że każdy trud był wart tej wspinaczki. Uwielbiam po latach patrzeć w dół.',
 	},
 ];
 

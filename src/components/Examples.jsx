@@ -3,6 +3,7 @@ import { EXAMPLES } from '../data';
 import Jokes from './Jokes';
 import { useState } from 'react';
 import Section from './Section';
+import Tabs from './Tabs';
 
 export default function Examples() {
 	const [selectedTopic, setSelectedTopic] = useState();
@@ -60,38 +61,44 @@ export default function Examples() {
 	}
 	return (
 		<Section id='examples' title='No i jeszcze kilka powodów ... '>
-			
-			<menu>
-				<TabButton
-					isSelected={selectedTopic === 'components'}
-					onSelect={() => handleSelect('components')}>
-					Components
-				</TabButton>
-				{/* do onSelect przypisujemy funkcje, a całe onSelect jest przekazane do komponentu tabButton i przekazane do onCLicka */}
-				<TabButton
-					isSelected={selectedTopic === 'jsx'}
-					onSelect={() => handleSelect('jsx')}>
-					JSX
-				</TabButton>
-				<TabButton
-					isSelected={selectedTopic === 'props'}
-					onSelect={() => handleSelect('props')}>
-					Props
-				</TabButton>
-				<TabButton
-					isSelected={selectedTopic === 'state'}
-					onSelect={() => handleSelect('state')}>
-					State
-				</TabButton>
-				<TabButton
-					isSelected={selectedTopic === 'suchary'}
-					onSelect={() => handleSelect('suchary')}>
-					Suchary
-				</TabButton>
-			</menu>
+			<Tabs
+				//buttonsContainer='menu' zamian przekazywania w komponencie Tabs mozna ustawić domyślną wartość dla buttonsContainer
+				buttons={
+					<>
+						<TabButton
+							isSelected={selectedTopic === 'components'}
+							onSelect={() => handleSelect('components')}>
+							Components
+						</TabButton>
+						{/* do onSelect przypisujemy funkcje, a całe onSelect jest przekazane do komponentu tabButton i przekazane do onCLicka */}
+						<TabButton
+							isSelected={selectedTopic === 'jsx'}
+							onSelect={() => handleSelect('jsx')}>
+							JSX
+						</TabButton>
+						<TabButton
+							isSelected={selectedTopic === 'props'}
+							onSelect={() => handleSelect('props')}>
+							Props
+						</TabButton>
+						<TabButton
+							isSelected={selectedTopic === 'state'}
+							onSelect={() => handleSelect('state')}>
+							State
+						</TabButton>
+						<TabButton
+							isSelected={selectedTopic === 'suchary'}
+							onSelect={() => handleSelect('suchary')}>
+							Suchary
+						</TabButton>
+					</>
+				}>
+				<div id='tab-content'>{tabContent}</div>
+			</Tabs>
+
 			{/* {selectedTopic} */}
-			<div id='tab-content'>
-				{/* PIERWSZA MOŻLIWOŚĆ PREZENTACJI WARUNKOWEJ ZA POMOCĄ OPERATORA TRÓJSKŁADNIKOWEGO
+
+			{/* PIERWSZA MOŻLIWOŚĆ PREZENTACJI WARUNKOWEJ ZA POMOCĄ OPERATORA TRÓJSKŁADNIKOWEGO
             {!selectedTopic ? (
 							<p> Wybierz temat </p>
 						) : (
@@ -103,7 +110,7 @@ export default function Examples() {
 								</pre>
 							</div>
 						)} */}
-				{/* DRUGA MOŻLIWOŚĆ ZA POMOCĄ &&
+			{/* DRUGA MOŻLIWOŚĆ ZA POMOCĄ &&
             {!selectedTopic && <p>Wybierz temat</p>}
 						{selectedTopic && (
 							<div>
@@ -114,9 +121,7 @@ export default function Examples() {
 								</pre>
 							</div>
 						)} */}
-				{/* trzecia możliwość, za pomocą przypisania kodu JSX do zmiennej i wyświetlanie jej po spełnieniu warunków, wyżej dodane przed return */}
-				{tabContent}
-			</div>
+			{/* trzecia możliwość, za pomocą przypisania kodu JSX do zmiennej i wyświetlanie jej po spełnieniu warunków, wyżej dodane przed return */}
 		</Section>
 	);
 }
