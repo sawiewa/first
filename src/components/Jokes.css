@@ -1,0 +1,12 @@
+p {
+	text-align: center;
+}
+
+p.answer {
+	color: rgb(213, 188, 200);
+	background-color: rgb(91, 96, 91);
+	border-radius: 15px;
+}
+p.beforDraw{
+	color: rgb(109, 108, 108);
+}
