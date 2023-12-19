@@ -2,31 +2,142 @@ import heartImg from './assets/heart.jpg';
 import osiolImg from './assets/osiol.jpg';
 import drzewoImg from './assets/drzewo.jpg';
 import wszystkoImg from './assets/wszystko.png';
+export const QUESTIONS100 = [
+	{
+		categotry: 'JS',
+		point: 200,
+		question: 'Ternary operator',
+		id: 1,
+	},
+	{
+		categotry: 'HTML/CSS',
+		point: 300,
+		question: 'Co to jest specyficzność CSS?',
+		id: 1,
+	},
+	{
+		categotry: 'JS',
+		point: 300,
+		question: 'Czym różni się forEach od map?',
+		id: 2,
+	},
+	{
+		categotry: 'React',
+		point: 300,
+		question: 'Co to są state i props? Jakie są różnice?',
+		id: 3,
+	},
+	{
+		categotry: 'HTML/CSS',
+		point: 300,
+		question: 'Co to jest Flexbox?',
+		id: 4,
+	},
+	{
+		categotry: 'JS',
+		point: 300,
+		question:
+			'Jak odwrócić kolejność liter w wyrazie nie używając metody reverse()?',
+		id: 5,
+	},
+	{
+		categotry: 'JS',
+		point: 500,
+		question: 'Co to jest Event Loop?',
+		id: 6,
+	},
+	{
+		categotry: 'JS',
+		point: 400,
+		question: 'Promisy',
+		id: 7,
+	},
+	{
+		categotry: 'JS',
+		point: 400,
+		question: 'Co powiesz na temat funkcji asynchronicznych',
+		id: 8,
+	},
+	{
+		categotry: 'HTML/CSS',
+		point: 100,
+		question: 'Czym się róznic div od spana?',
+		id: 9,
+	},
+	{
+		categotry: 'HTML/CSS',
+		point: 100,
+		question: 'Display none a Visibility Hidden, jaka jest różnica?',
+		id: 10,
+	},
+	{
+		categotry: 'JS',
+		point: 100,
+		question: 'Co to są falsy value?',
+		id: 12,
+	},
+	{
+		categotry: 'React',
+		point: 100,
+		question: 'Co to jest React i jakie są jego zalety?',
+		id: 13,
+	},
+	{
+		categotry: 'React',
+		point: 300,
+		question: 'Co powoduje ponowny rerender komponentu Reactowego?',
+		id: 15,
+	},
+	{
+		categotry: 'JS',
+		point: 200,
+		question: 'Co to jest "Optional chaining?',
+		id: 16,
+	},
+	{
+		categotry: 'React',
+		point: 100,
+		question:
+			'Nazwa atrybutu przypisującego labela ze struktury HTML do inputu w React?',
+		id: 17,
+	},
+	{
+		categotry: 'JS',
+		point: 100,
+		question: 'Co to jest Template literals?',
+		id: 17,
+	},
+	{
+		categotry: 'React',
+		point: 1000,
+		question: 'Redux-Saga',
+		id: 18,
+	},
+];
 
 export const CORE_CONCEPTS = [
 	{
 		image: heartImg,
 		title: 'Znam Was',
 		description:
-			'Pozwólcie mi dołączyć do tego Waszego kolorowego frontendowego świata, gdzie każdy dzień to nowy div, a każdy projekt to przygoda. I nie musicie się zastanawiać jakim jestem człowiekiem, bo już to Wiecie.',
+			'Nie musicie się zastanawiać jakim jestem człowiekiem, bo już to Wiecie.',
 	},
 	{
 		image: wszystkoImg,
 		title: 'Znam aplikację',
 		description:
-			'Wiem, jak działa aplikacja, tak jak znam swoje ulubione bajki z dzieciństwa. Teraz wystarczy tylko przetłumaczyć te bajkowe opowieści na język programowania.',
+			'Wiem, jak działa aplikacja, to ze 2 dni mniej wdrażania i nie będę mieć tygodnia onboardingu   :)',
 	},
 	{
 		image: osiolImg,
 		title: 'Jestem uparta',
-		description:
-			'Upór to moja SUPERMOC, jak mówią to "Im dalej w las, tym więcej tlenu"',
+		description: 'To moja SUPERMOC',
 	},
 	{
 		image: drzewoImg,
 		title: 'Jestem cierpliwa',
 		description:
-			'Cierpliwość w dążeniu do celu to nie tylko cecha charakteru, to filozofia życia. Bo kiedy docieramy na szczyt góry naszych marzeń, spojrzymy w dół i zrozumiemy, że każdy trud był wart tej wspinaczki. Uwielbiam po latach patrzeć w dół.',
+			'i daję z siebie wszystko żeby osiągnąć cel "Im dalej w las, tym więcej tlenu"',
 	},
 ];
 
@@ -43,6 +154,11 @@ function Welcome() {
 	suchary: {
 		title: 'Suchary',
 		description: 'Wylosuj suchara',
+		code: '',
+	},
+	quiz: {
+		title: 'Quiz',
+		description: 'wybierze pytanie',
 		code: '',
 	},
 	jsx: {

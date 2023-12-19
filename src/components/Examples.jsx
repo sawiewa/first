@@ -4,25 +4,15 @@ import Jokes from './Jokes';
 import { useState } from 'react';
 import Section from './Section';
 import Tabs from './Tabs';
+import Table from './Table';
 
 export default function Examples() {
 	const [selectedTopic, setSelectedTopic] = useState();
 
 	function handleSelect(selectedButton) {
 		setSelectedTopic(selectedButton);
-		console.log(selectedTopic);
-		//setSelectedJoke('tu będzie twoj suchar');
 	}
-	// const jokesLenght = JOKES.length;
-	// function drawIndeks() {
-	// 	const indexJoke = Math.round(Math.random() * (jokesLenght - 1));
-	// 	setSelectedJoke(JOKES[indexJoke]);
-	// 	setvisibilityProgress(true);
-	// 	setTimeout(changeStateProgress, 500);
-	// }
-	// function changeStateProgress() {
-	// 	setvisibilityProgress(false);
-	// }
+	
 
 	// async function hideProgress() {
 	// 	try {
@@ -37,7 +27,7 @@ export default function Examples() {
 	// 	}
 	// }
 
-	let tabContent = <p>Wybierz temat</p>;
+	let tabContent = <p>Wybierz zakładkę</p>;
 	if (selectedTopic) {
 		tabContent = (
 			<Section title={EXAMPLES[selectedTopic].title}>
@@ -46,45 +36,25 @@ export default function Examples() {
 					<code>{EXAMPLES[selectedTopic].code}</code>
 				</pre>
 			</Section>
-			// <div>
-			// 	<h3>{EXAMPLES[selectedTopic].title}</h3>
-			// 	<p>{EXAMPLES[selectedTopic].description}</p>
-			// 	<pre>
-			// 		<code>{EXAMPLES[selectedTopic].code}</code>
-			// 	</pre>
-			// 	{/* {selectedTopic === 'suchary' && <Jokes />} */}
-			// </div>
 		);
 	}
 	if (selectedTopic === 'suchary') {
 		tabContent = <Jokes />;
+	} else if (selectedTopic === 'quiz') {
+		tabContent = <Table />;
 	}
 	return (
-		<Section id='examples' title='No i jeszcze kilka powodów ... '>
+		<Section id='examples' title='No i jeszcze coś od siebie: '>
 			<Tabs
 				//buttonsContainer='menu' zamian przekazywania w komponencie Tabs mozna ustawić domyślną wartość dla buttonsContainer
 				buttons={
 					<>
-						<TabButton
-							isSelected={selectedTopic === 'components'}
-							onSelect={() => handleSelect('components')}>
-							Components
-						</TabButton>
 						{/* do onSelect przypisujemy funkcje, a całe onSelect jest przekazane do komponentu tabButton i przekazane do onCLicka */}
+
 						<TabButton
-							isSelected={selectedTopic === 'jsx'}
-							onSelect={() => handleSelect('jsx')}>
-							JSX
-						</TabButton>
-						<TabButton
-							isSelected={selectedTopic === 'props'}
-							onSelect={() => handleSelect('props')}>
-							Props
-						</TabButton>
-						<TabButton
-							isSelected={selectedTopic === 'state'}
-							onSelect={() => handleSelect('state')}>
-							State
+							isSelected={selectedTopic === 'quiz'}
+							onSelect={() => handleSelect('quiz')}>
+							Quiz
 						</TabButton>
 						<TabButton
 							isSelected={selectedTopic === 'suchary'}

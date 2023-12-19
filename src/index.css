@@ -111,13 +111,18 @@ img {
 	border: none;
 	border-radius: 6px;
 	background-color: #436f74;
-	color: #d2e1e3;
+	color: #d2d9da;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 1rem;
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 	height: 50px;
 	width: 200px;
+}
+#examples div button.selected {
+	background-color: #6d8185;
+	color: #0a0d0d;
+	cursor: auto;
 }
 #examples div button:hover {
 	background-color: #6d8185;
@@ -126,4 +131,102 @@ img {
 progress {
 	margin: 0 0 0 12px;
 	color: #6d8185;
+}
+#game-board {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	margin: 3rem 0;
+	padding: 0;
+	flex-direction: column;
+}
+
+#game-board tr {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+	margin: 10px;
+	padding: 0;
+}
+
+th {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #52796f;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	height: 50px;
+	border-radius: 10px;
+}
+
+.dialog {
+	height: fit-content;
+	width: fit-content;
+	background-color: #7c8f93;
+	border: none;
+	border-radius: 20px;
+	font-size: 12px;
+	padding: 20px;
+}
+
+.dialog[open]::backdrop {
+	background-color: rgba(5, 5, 17, 0.25);
+}
+.dialog button {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 6px;
+	background-color: #436f74;
+	color: #d2e1e3;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	height: 50px;
+	width: 200px;
+	text-align: center;
+}
+.buttonSpaceDialog {
+	display: flex;
+	justify-content: center;
+}
+.dialog button:hover {
+	background-color: #6d8185;
+	color: #0a0d0d;
+}
+
+.contener {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.columna {
+	display: flex;
+	flex-direction: column;
+}
+.columna button {
+	margin-top: 5px;
+}
+.columna.inactive button {
+	color: brown;
+}
+.columna p {
+	background-color: #6d8185;
+	border-radius: 5px;
+}
+
+#game-board .contener p {
+	height: 50px;
+	width: 100px;
+}
+
+#game-board .contener div button {
+	margin: 5px;
+}
+#game-board .contener div {
+	background-color: #d2e1e3;
 }
